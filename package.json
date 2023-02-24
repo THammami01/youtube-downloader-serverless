@@ -1,0 +1,34 @@
+{
+  "name": "youtube-downloader-serverless",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "vite:dev": "vite",
+    "vite:build": "tsc && vite build",
+    "vite:preview": "vite preview",
+    "prettier:check": "prettier --config .prettierrc.json --check .",
+    "prettier:format": "prettier --config .prettierrc.json --write . --ignore-unknown",
+    "dev": "netlify dev",
+    "build": "netlify build"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "buffer": "^6.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6",
+    "sass": "^1.54.4",
+    "ytdl-core": "^4.11.2"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^1.0.0",
+    "@types/chrome": "^0.0.193",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "netlify-cli": "^10.17.4",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.6"
+  }
+}

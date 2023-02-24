@@ -1,0 +1,25 @@
+[dev]
+  command = "yarn vite:dev"
+  publish = "dist"
+  # port = 7777
+  targetPort = 7777
+  functionsPort = 7778
+
+[build]
+  command = "yarn vite:build"
+  publish = "dist"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  force = true
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
